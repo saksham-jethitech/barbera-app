@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Jost&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro&display=swap");
+/* 
+body {
+  font-family: "Jost", sans-serif;
+} */
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  /* color: white; */
+  filter: brightness(0) invert(1);
+  /* opacity: 1;
+  display: block;
+  background: url(https://mywildalberta.ca/images/GFX-MWA-Parks-Reservations.png)
+    no-repeat;
+  width: 20px;
+  height: 20px;
+  border-width: thin; */
+}
+
+@media screen and (min-width: 1440px) {
+}
+
+@media screen and (min-width: 700px) and (max-width: 1440px) {
+}
+
+@media screen and (max-width: 700px) {
+}
