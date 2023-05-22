@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Carrer from "./Carrer";
 import Navbar from "./Components/Navbar";
 import TempNav from "./Components/TempNav";
@@ -7,19 +8,25 @@ import GetApp from "./GetApp";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Terms from "./Terms";
 import Privacy from "./Privacy";
+import Services from "./Services";
+import Footer from "./Components/Footer";
+import Home from "./Home";
 
 function App() {
   return (
     <div className="App">
       <Navbar />
       <Routes>
+        <Route exact path="/" element={<Home />} />
         <Route exact path="/contact" element={<ContactUs />} />
         <Route exact path="/career" element={<Carrer />} />
         <Route exact path="/getApp" element={<GetApp />} />
         <Route exact path="/cookie" element={<Cookie />} />
         <Route exact path="/privacy" element={<Privacy />} />
         <Route exact path="/terms&conditions" element={<Terms />} />
+        <Route exact path="/services" element={<Services />} />
       </Routes>
+      <Footer />
       {/* <TempNav /> */}
       {/* <GetApp /> */}
       {/* <Carrer /> */}

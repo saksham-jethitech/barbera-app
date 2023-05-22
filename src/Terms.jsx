@@ -104,7 +104,7 @@ const Terms = () => {
         </div>
       </div>
 
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };

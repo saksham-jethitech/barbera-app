@@ -104,7 +104,7 @@ const Cookie = () => {
         </div>
       </div>
 
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };

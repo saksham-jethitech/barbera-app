@@ -2,6 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
+  const handleClick = () => {
+    // setAllLinksToInactive();
+    window.scroll(0, 0);
+  };
+
   return (
     <>
       <div className="h-[30%] bg-[#202125] w-full flex flex-col md:flex-row space-y-5 md:space-y-0 items-center justify-around p-2 md:p-8">
@@ -26,18 +31,21 @@ const Footer = () => {
           <Link
             to="/terms&conditions"
             className="text-white font-be-jost-pro text-sm font-medium text-center"
+            onClick={handleClick}
           >
             Terms & Conditions
           </Link>
           <Link
             to="/privacy"
             className="text-white font-be-jost-pro text-sm font-medium text-center"
+            onClick={handleClick}
           >
             Privacy Policy
           </Link>
           <Link
             to="/cookie"
             className="text-white font-be-jost-pro text-sm font-medium text-center"
+            onClick={handleClick}
           >
             Cookie Policy
           </Link>

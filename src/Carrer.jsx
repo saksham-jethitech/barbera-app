@@ -127,7 +127,7 @@ const Carrer = () => {
         {/* </div> */}
       </div>
 
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };

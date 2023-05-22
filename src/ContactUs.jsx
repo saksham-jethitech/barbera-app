@@ -23,7 +23,7 @@ const Cookies = () => {
   };
 
   return (
-    <div className="w-full h-auto md:h-screen">
+    <div className="w-full h-auto ">
       <div className="flex flex-col items-center md:justify-around md:items-center w-full min-h-[60%] py-16 bg-[#11120F]">
         <div className="w-full p-5 px-20">
           <div className="flex flex-col space-y-3 w-full justify-start items-center">
@@ -84,12 +84,21 @@ const Cookies = () => {
             </div>
           </div>
           <div className="flex flex-col justify-center items-center mt-5 md:mt-0 w-full md:w-[40%]">
-            <img src="/Assets/Maps.png" className="rounded-md w-9/12" />
+            {/* <img src="/Assets/Maps.png" className="rounded-md w-9/12" /> */}
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14231.702376990514!2d75.7907431!3d26.9058564!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db5c178663641%3A0x782b649b2fe391d!2sBarbera%2C%20Salon%20At%20Home%2C%20Jaipur!5e0!3m2!1sen!2sin!4v1684731210406!5m2!1sen!2sin"
+              width="600"
+              height="450"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              className="rounded-md w-9/12"
+            ></iframe>
           </div>
         </div>
       </div>
 
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };

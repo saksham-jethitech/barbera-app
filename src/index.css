@@ -21,6 +21,23 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   border-width: thin; */
 }
 
+.dot-leaders {
+  display: flex;
+  align-items: end;
+}
+
+.dot-leaders span {
+  /* align-self: end; */
+  margin-bottom: 5px;
+  margin-left: 3px;
+  margin-right: 3px;
+  white-space: nowrap;
+}
+
+.dot-leaders .dot-line {
+  flex-grow: 1;
+  border-bottom: 1px dotted white;
+}
 @media screen and (min-width: 1440px) {
 }
 

@@ -3,8 +3,8 @@ import Footer from "./Components/Footer";
 
 const GetApp = () => {
   return (
-    <div className="w-full h-auto md:h-screen">
-      <div className="flex flex-col md:flex-row items-center md:justify-around md:items-center w-full h-3/5 py-6 bg-[#11120F]">
+    <div className="w-full h-auto ">
+      <div className="flex flex-col md:flex-row items-center md:justify-around md:items-center w-full h-3/5 h-auto py-6 bg-[#11120F]">
         <div className="flex flex-col items-start justify-center p-10 md:p-0 w-full md:w-1/3 space-y-5">
           <p className="text-[#FBB034] text-lg font-normal font-be-jost-pro w-full text-center md:text-left">
             Get an App
@@ -45,7 +45,7 @@ const GetApp = () => {
         <img src="/Assets/Mobile-icon.png" />
       </div>
 
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };

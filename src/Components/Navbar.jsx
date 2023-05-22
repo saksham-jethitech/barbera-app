@@ -1,14 +1,16 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const [navbar, setNavbar] = useState(false);
 
+  const location = useLocation();
+
   return (
     <nav className="w-full bg-[#11120F] shadow">
       <div className="w-full bg-[#FBB034] flex flex-col md:flex-row p-3 space-y-3 md:space-y-0">
-        <div className="w-full md:w-8/12 flex justify-end items-center">
-          <p className="poppins text-sm font-medium">
+        <div className="w-full md:w-8/12 flex justify-center md:justify-end items-center">
+          <p className="poppins text-sm font-medium text-center">
             Opening Hour : Sunday - Friday , 08:00 am - 10:00 pm
           </p>
         </div>
@@ -70,20 +72,53 @@ const Navbar = () => {
             }`}
           >
             <ul className="items-center justify-center space-y-8 md:flex md:space-x-20 md:space-y-0">
-              <li className="text-white hover:text-[#FFA91A] font-semibold">
-                <Link to="/">Home</Link>
+              <li
+                className={`${
+                  location.pathname == "/" ? `text-[#FFA91A]` : `text-white`
+                } hover:text-[#FFA91A] font-semibold`}
+              >
+                <NavLink to="/">Home</NavLink>
               </li>
-              <li className="text-white hover:text-[#FFA91A] font-semibold">
+              <li
+                className={`${
+                  location.pathname == "/about"
+                    ? `text-[#FFA91A]`
+                    : `text-white`
+                } hover:text-[#FFA91A] font-semibold`}
+              >
                 <Link to="/about">About US</Link>
               </li>
-              <li className="text-white hover:text-[#FFA91A] font-semibold">
+              <li
+                className={`${
+                  location.pathname == "/services"
+                    ? `text-[#FFA91A]`
+                    : `text-white`
+                } hover:text-[#FFA91A] font-semibold`}
+              >
                 <Link to="/services">Services</Link>
               </li>
-              <li className="text-white hover:text-[#FFA91A] font-semibold">
+              <li
+                className={`${
+                  location.pathname == "/contact"
+                    ? `text-[#FFA91A]`
+                    : `text-white`
+                } hover:text-[#FFA91A] font-semibold`}
+              >
                 <Link to="/contact">Contact</Link>
               </li>
-              <li className="text-white hover:text-[#FFA91A] font-semibold">
-                <Link to="/getApp">Get the APP</Link>
+              <li
+                className={`${
+                  location.pathname == "/getApp"
+                    ? `text-[#FFA91A]`
+                    : `text-white`
+                } hover:text-[#FFA91A] font-semibold`}
+              >
+                <NavLink
+                  // onClick={handleGetApp}
+                  to="/getApp"
+                >
+                  Get the APP
+                </NavLink>
               </li>
             </ul>
           </div>
