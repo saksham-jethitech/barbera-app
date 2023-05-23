@@ -11,6 +11,7 @@ import Privacy from "./Privacy";
 import Services from "./Services";
 import Footer from "./Components/Footer";
 import Home from "./Home";
+import About from "./About";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route exact path="/" element={<Home />} />
+        <Route exact path="/about" element={<About />} />
         <Route exact path="/contact" element={<ContactUs />} />
         <Route exact path="/career" element={<Carrer />} />
         <Route exact path="/getApp" element={<GetApp />} />

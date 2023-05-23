@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import Footer from "./Components/Footer";
+import { CircularProgress } from "@material-ui/core";
+import axios from "axios";
 
 const Cookies = () => {
   const [name, setName] = useState("");
@@ -8,9 +9,12 @@ const Cookies = () => {
   const [message, setMessage] = useState("");
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [emptyField, setEmptyField] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
-  const handleClick = () => {
+  const handleClick = async () => {
     setEmptyField(false);
+    setIsLoading(true);
+
     if (
       name.length == 0 ||
       number.length == 0 ||
@@ -20,6 +24,24 @@ const Cookies = () => {
       setEmptyField(true);
       return;
     }
+    console.log("url", process.env.REACT_APP_BASE_URL);
+    await axios
+      .post(`${process.env.REACT_APP_BASE_URL}/email/contactUs`, {
+        name,
+        email,
+        mobile: number,
+        message,
+      })
+      .then((res) => {
+        setName("");
+        setNumber("");
+        setEmail("");
+        setMessage("");
+      })
+      .catch((error) => {
+        console.log("error", error);
+      });
+    setIsLoading(false);
   };
 
   return (
@@ -98,7 +120,15 @@ const Cookies = () => {
         </div>
       </div>
 
-      {/* <Footer /> */}
+      {isLoading ? (
+        <div className="fixed top-0 left-0 bottom-0 right-0 flex items-center justify-center bg-black bg-opacity-30 text-white z-50">
+          <CircularProgress
+            color="inherit"
+            size="7rem"
+            className="self-center"
+          />
+        </div>
+      ) : null}
     </div>
   );
 };

@@ -2,6 +2,7 @@ import React from "react";
 import Services from "./Services";
 import GetApp from "./GetApp";
 import ReviewCard from "./Components/ReviewCard";
+import AboutHelper from "./Components/AboutHelper";
 
 const Home = () => {
   return (
@@ -27,7 +28,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="flex flex-col-reverse md:flex-row items-center justify-around w-full min-h-[60] py-16 px-3 md:px-0 bg-[#202125] ">
+      {/* <div className="flex flex-col-reverse md:flex-row items-center justify-around w-full min-h-[60] py-16 px-3 md:px-0 bg-[#202125] ">
         <img
           src="/Assets/homepage-2.png"
           className="w-full md:w-1/2 lg:w-1/3 mt-16 md:mt-0"
@@ -48,7 +49,9 @@ const Home = () => {
             Learn More
           </button>
         </div>
-      </div>
+      </div> */}
+
+      <AboutHelper />
 
       <Services />
 
