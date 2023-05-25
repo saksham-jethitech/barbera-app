@@ -12,6 +12,8 @@ import Services from "./Services";
 import Footer from "./Components/Footer";
 import Home from "./Home";
 import About from "./About";
+import AdminLogin from "./AdminLogin";
+import AdminDashboard from "./Components/AdminDashboard";
 
 function App() {
   return (
@@ -27,6 +29,8 @@ function App() {
         <Route exact path="/privacy" element={<Privacy />} />
         <Route exact path="/terms&conditions" element={<Terms />} />
         <Route exact path="/services" element={<Services />} />
+        <Route exact path="/admin/login" element={<AdminLogin />} />
+        <Route exact path="/admin/dashboard" element={<AdminDashboard />} />
       </Routes>
       <Footer />
       {/* <TempNav /> */}

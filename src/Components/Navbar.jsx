@@ -6,6 +6,11 @@ const Navbar = () => {
 
   const location = useLocation();
 
+  if (location.pathname.startsWith("/admin")) {
+    // If the route starts with '/admin', do not render the navbar
+    return null;
+  }
+
   return (
     <nav className="w-full bg-[#11120F] shadow">
       <div className="w-full bg-[#FBB034] flex flex-col md:flex-row p-3 space-y-3 md:space-y-0">

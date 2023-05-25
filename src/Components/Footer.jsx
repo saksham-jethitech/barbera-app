@@ -1,11 +1,18 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 
 const Footer = () => {
   const handleClick = () => {
     // setAllLinksToInactive();
     window.scroll(0, 0);
   };
+
+  const location = useLocation();
+
+  if (location.pathname.startsWith("/admin")) {
+    // If the route starts with '/admin', do not render the navbar
+    return null;
+  }
 
   return (
     <>
