@@ -7,6 +7,7 @@ module.exports = {
         "be-vietnam-pro": ['"Be Vietnam Pro"', "sans-serif"],
         "be-jost-pro": ['"Jost"', "sans-serif"],
         poppins: ["Poppins", "sans-serif"],
+        montserrat: ["Montserrat", "sans-serif"],
       },
     },
   },

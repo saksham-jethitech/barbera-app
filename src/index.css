@@ -4,10 +4,16 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Jost&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+
 /* 
 body {
   font-family: "Jost", sans-serif;
 } */
+
+.svg-container:hover svg {
+  fill: #fbb033; /* Change the fill color of the SVG icon when the parent div is hovered */
+}
 
 input[type="date"]::-webkit-calendar-picker-indicator {
   /* color: white; */

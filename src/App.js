@@ -13,7 +13,7 @@ import Footer from "./Components/Footer";
 import Home from "./Home";
 import About from "./About";
 import AdminLogin from "./AdminLogin";
-import AdminDashboard from "./Components/AdminDashboard";
+import AdminDashboard from "./AdminDashboard";
 
 function App() {
   return (
