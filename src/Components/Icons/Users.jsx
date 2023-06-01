@@ -1,8 +1,8 @@
 import React from "react";
 import "../../index.css";
-const Users = () => {
+const Users = ({ fill }) => {
   return (
-    <svg width="24" height="24" viewBox="0 0 24 24" className="fill-white ">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill={fill}>
       <path
         // fill-rule="evenodd"
         // clip-rule="evenodd"

@@ -9,7 +9,7 @@ const Layout = ({ children }) => {
   };
 
   return (
-    <div className=" pt-5 bg-black flex flex-col w-full min-h-full h-fit">
+    <div className=" pt-5 bg-[#0c0b0b] flex flex-col w-full min-h-full h-fit">
       <div className="lg:pl-64 w-full bg-[#191919] p-3 flex justify-around items-center">
         <div className="w-4/5 justify-between flex items-center">
           <h3 className="font-be-jost-pro font-bold text-4xl text-[#FBB033] cursor-default">

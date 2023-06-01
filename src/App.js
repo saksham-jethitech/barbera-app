@@ -1,7 +1,6 @@
 import { useState } from "react";
 import Carrer from "./Carrer";
 import Navbar from "./Components/Navbar";
-import TempNav from "./Components/TempNav";
 import ContactUs from "./ContactUs";
 import Cookie from "./Cookie";
 import GetApp from "./GetApp";
@@ -14,6 +13,11 @@ import Home from "./Home";
 import About from "./About";
 import AdminLogin from "./AdminLogin";
 import AdminDashboard from "./AdminDashboard";
+import AdminService from "./AdminService";
+import AdminBookings from "./AdminBookings";
+import Banners from "./Banners";
+import CodeManagement from "./CodeManagement";
+import UserManagement from "./UserManagement";
 
 function App() {
   return (
@@ -31,6 +35,19 @@ function App() {
         <Route exact path="/services" element={<Services />} />
         <Route exact path="/admin/login" element={<AdminLogin />} />
         <Route exact path="/admin/dashboard" element={<AdminDashboard />} />
+        <Route exact path="/admin/services" element={<AdminService />} />
+        <Route exact path="/admin/bookings" element={<AdminBookings />} />
+        <Route
+          exact
+          path="/admin/user-management"
+          element={<UserManagement />}
+        />
+        <Route
+          exact
+          path="/admin/code-management"
+          element={<CodeManagement />}
+        />
+        <Route exact path="/admin/banners" element={<Banners />} />
       </Routes>
       <Footer />
       {/* <TempNav /> */}

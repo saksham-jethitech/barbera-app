@@ -3,7 +3,7 @@ import { MdOutlineDashboard } from "react-icons/md";
 import BrokenBag from "./Icons/BrokenBag";
 import Users from "./Icons/Users";
 import Setting from "./Icons/Setting";
-import { useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 
 const Sidebar = () => {
   const [open, setOpen] = useState(true);
@@ -14,9 +14,9 @@ const Sidebar = () => {
     setOpen(!open);
   };
   return (
-    <div className=" h-full fixed flex items-end justify-end ">
+    <div className=" h-full z-50 fixed flex items-end justify-end ">
       <button
-        className="fixed lg:hidden z-90 bottom-10 right-8 bg-[#191919] w-10 h-10 rounded-full drop-shadow-lg flex justify-center items-center text-white text-4xl hover:bg-[#151515]   duration-300"
+        className="fixed  lg:hidden z-90 bottom-10 right-8 bg-[#191919] w-10 h-10 rounded-full drop-shadow-lg flex justify-center items-center text-white text-4xl hover:bg-[#151515]   duration-300"
         onClick={toggleSidebar}
       >
         <span className="text-white">
@@ -51,7 +51,8 @@ const Sidebar = () => {
         <div
           className={`w-full ${open ? `flex flex-col space-y-5` : `hidden`} `}
         >
-          <div
+          <Link
+            to="/admin/dashboard"
             className={`${
               location.pathname == "/admin/dashboard"
                 ? "rounded-r-2xl text-[#FBB033]"
@@ -60,27 +61,84 @@ const Sidebar = () => {
           >
             <MdOutlineDashboard className="text-2xl" />
             <span>Dashboard</span>
-          </div>
-          <div className="svg-container w-full flex p-2 cursor-pointer hover:rounded-r-2xl bg-[#0C0B0B] py-4 hover:text-[#FBB033] font-montserrat font-semibold text-white text-sm items-center gap-x-2 ">
-            <BrokenBag fill="white" />
+          </Link>
+          <Link
+            to="/admin/bookings"
+            className={`${
+              location.pathname == "/admin/bookings"
+                ? "rounded-r-2xl text-[#FBB033]"
+                : "text-white"
+            } svg-container w-full flex p-2 cursor-pointer hover:rounded-r-2xl bg-[#0C0B0B] py-4 hover:text-[#FBB033] font-montserrat font-semibold  text-sm items-center gap-x-2 `}
+          >
+            <BrokenBag
+              fill={
+                location.pathname == "/admin/bookings" ? "#FBB033" : `white`
+              }
+            />
             <span>Booking</span>
-          </div>
-          <div className="svg-container w-full flex p-2 cursor-pointer hover:rounded-r-2xl bg-[#0C0B0B] py-4 hover:text-[#FBB033] font-montserrat font-semibold text-white text-sm items-center gap-x-2 ">
-            <Users fill="white" />
+          </Link>
+          <Link
+            to="/admin/user-management"
+            className={`${
+              location.pathname == "/admin/user-management"
+                ? "rounded-r-2xl text-[#FBB033]"
+                : "text-white"
+            } svg-container w-full flex p-2 cursor-pointer hover:rounded-r-2xl bg-[#0C0B0B] py-4 hover:text-[#FBB033] font-montserrat font-semibold  text-sm items-center gap-x-2 `}
+          >
+            <Users
+              fill={
+                location.pathname == "/admin/user-management"
+                  ? "#FBB033"
+                  : `white`
+              }
+            />
             <span>User Management</span>
-          </div>
-          <div className="svg-container w-full flex p-2 cursor-pointer hover:rounded-r-2xl bg-[#0C0B0B] py-4 hover:text-[#FBB033] font-montserrat font-semibold text-white text-sm items-center gap-x-2 ">
-            <Setting fill="white" />
+          </Link>
+          <Link
+            to="/admin/services"
+            className={`${
+              location.pathname == "/admin/services"
+                ? "rounded-r-2xl text-[#FBB033]"
+                : "text-white"
+            } svg-container w-full flex p-2 cursor-pointer hover:rounded-r-2xl bg-[#0C0B0B] py-4 hover:text-[#FBB033] font-montserrat font-semibold  text-sm items-center gap-x-2 `}
+          >
+            <Setting
+              fill={
+                location.pathname == "/admin/services" ? "#FBB033" : `white`
+              }
+            />
             <span>Services</span>
-          </div>
-          <div className="svg-container w-full flex p-2 cursor-pointer hover:rounded-r-2xl bg-[#0C0B0B] py-4 hover:text-[#FBB033] font-montserrat font-semibold text-white text-sm items-center gap-x-2 ">
-            <Users fill="white" />
+          </Link>
+          <Link
+            to="/admin/code-management"
+            className={`${
+              location.pathname == "/admin/code-management"
+                ? "rounded-r-2xl text-[#FBB033]"
+                : "text-white"
+            } svg-container w-full flex p-2 cursor-pointer hover:rounded-r-2xl bg-[#0C0B0B] py-4 hover:text-[#FBB033] font-montserrat font-semibold  text-sm items-center gap-x-2 `}
+          >
+            <Users
+              fill={
+                location.pathname == "/admin/code-management"
+                  ? "#FBB033"
+                  : `white`
+              }
+            />
             <span>Code Management</span>
-          </div>
-          <div className="svg-container w-full flex p-2 cursor-pointer hover:rounded-r-2xl bg-[#0C0B0B] py-4 hover:text-[#FBB033] font-montserrat font-semibold text-white text-sm items-center gap-x-2 ">
-            <BrokenBag fill="white" />
+          </Link>
+          <Link
+            to="/admin/banners"
+            className={`${
+              location.pathname == "/admin/banners"
+                ? "rounded-r-2xl text-[#FBB033]"
+                : "text-white"
+            } svg-container w-full flex p-2 cursor-pointer hover:rounded-r-2xl bg-[#0C0B0B] py-4 hover:text-[#FBB033] font-montserrat font-semibold  text-sm items-center gap-x-2 `}
+          >
+            <BrokenBag
+              fill={location.pathname == "/admin/banners" ? "#FBB033" : `white`}
+            />
             <span>Banners</span>
-          </div>
+          </Link>
         </div>
       </div>
     </div>
